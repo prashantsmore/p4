@@ -7,7 +7,7 @@
 @section('content')
     <h1>Welcome</h1>
     <p>
-        Foobooks is simple book organizer, used to catalog all your favorite reads.
+        Staffing Managementis simple Staffing System, used to manage  staffing requests and assign employees accordingly.
     </p>
     <p>
         Choose a feature above to get started.

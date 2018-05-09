@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class StaffRequest extends Model
 {
 
-
-  
     /*
     * Dump the essential details of books to the page
     * Used when practicing queries and you want to quickly see the books in the database
@@ -30,8 +28,7 @@ class StaffRequest extends Model
         foreach ($staffRequests as $staffRequest) {
             $data[] = $staffRequest->request_id . ' has skill as ' . $staffRequest->skill;
         }
-		
+
         dump($data);
-		
     }
 }

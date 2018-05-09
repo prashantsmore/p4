@@ -22,12 +22,11 @@ Route::get('/', 'PageController@welcome');
 Route::get('/about', 'PageController@about');
 Route::get('/contact', 'PageController@contact');
 
-
 /**
  * Employees
  */
 # CREATE
-# Show the form to add a new employee
+# Show the form to add a new Employee
 Route::get('/employees/create', 'EmployeeController@create');
 
 # Process the form to add a new Employee
@@ -41,17 +40,17 @@ Route::get('/employees', 'EmployeeController@index');
 Route::get('/employees/{id}', 'EmployeeController@show');
 
 # UPDATE
-# Show the form to edit a specific book
+# Show the form to edit a specific employee
 Route::get('/employees/{id}/edit', 'EmployeeController@edit');
 
-# Process the form to edit a specific book
+# Process the form to edit a specific employee
 Route::put('/employees/{id}', 'EmployeeController@update');
 
 # DELETE
-# Show the page to confirm deletion of a book
+# Show the page to confirm deletion of a employee
 Route::get('/employees/{id}/delete', 'EmployeeController@delete');
 
-# Process the deletion of a book
+# Process the deletion of a employee
 Route::delete('/employees/{id}', 'EmployeeController@destroy');
 
 # READ
@@ -59,22 +58,19 @@ Route::delete('/employees/{id}', 'EmployeeController@destroy');
 Route::get('/requests', 'EmployeeController@showRequests');
 
 # UPDATE
-# Show the form to edit a specific book
+# Show the form to edit a specific employee
 Route::get('/staffRequests/{id}/match', 'EmployeeController@matchEmp');
 
 # UPDATE
-# Show the form to edit a specific book
+# Show the form to edit a specific employee
 Route::get('/staffRequests/{employeeId}/{staffId}/assignEmployee', 'EmployeeController@assignEmployee');
 
 # MISC
-# Search books
+# Search employee
 # TODO: Update to query database instead of books.json file
 Route::get('/books/search', 'BookController@search');
 
-
-
 Route::get('/debug', function () {
-
     $debug = [
         'Environment' => App::environment(),
         'Database defaultStringLength' => Illuminate\Database\Schema\Builder::$defaultStringLength,
@@ -94,7 +90,7 @@ Route::get('/debug', function () {
         $debug['Database connection test'] = 'PASSED';
         $debug['Databases'] = array_column($databases, 'Database');
     } catch (Exception $e) {
-        $debug['Database connection test'] = 'FAILED: '.$e->getMessage();
+        $debug['Database connection test'] = 'FAILED: ' . $e->getMessage();
     }
 
     dump($debug);

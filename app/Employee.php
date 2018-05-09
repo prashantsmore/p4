@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
 {
-/* 
- public function staffingRequest()
-    {
-        # Employee belongs to Sta
-        # Define an inverse one-to-many relationship.
-        return $this->belongsTo('App\Author');
-    }
-*/
+    /*
+     public function staffingRequest()
+        {
+            # Employee belongs to Sta
+            # Define an inverse one-to-many relationship.
+            return $this->belongsTo('App\Author');
+        }
+    */
 
     public function skills()
     {
@@ -42,8 +42,7 @@ class Employee extends Model
         foreach ($employees as $employee) {
             $data[] = $employee->first_name . ' has start_date as ' . $employee->start_date;
         }
-		
+
         dump($data);
-		
     }
 }
