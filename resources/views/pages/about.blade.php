@@ -7,7 +7,9 @@
 @section('content')
     <h1>About Staffing Management</h1>
 
-    <p>
-        Staffing Managementis simple Staffing System, used to manage  staffing requests and assign employees accordingly.
-    </p>
+	<blockquote>
+     <p>Staffing Management is a simple Staffing System, used to manage staffing requests and assign employees according to the matching skills.</p>
+     <small>Thanks <cite>Prashant More</cite></small>
+    </blockquote>
+
 @endsection

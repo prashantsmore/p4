@@ -2,16 +2,11 @@
 + By: *Prashant More*
 + Production URL: <http://p4.dwa15.online>
 
-## Outside resources
-+ Icons: [Font Awesome](https://fontawesome.com)
-+ CSS: [Bootstrap CDN](https://www.bootstrapcdn.com) & [CSS ZEN Garden](http://csszengarden.com)
-+ Image: <https://www.google.com/search?q=project-staffing+jpg&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwjzqcGG9fnaAhWEuVkKHWRuDKkQsAQIOQ&biw=1366&bih=606#imgrc=uipMv7v2P-ZzhM:>
-
 
 ## Database
-*Employee Data is stored in the `users` table. The skill  are stored in  the `skills` table.*
+*Employee Data is stored in the `employees` table. The skill  are stored in  the `skills` table.*
 *The pivot table `employee_skill` stores  employee with skills with many-to-many relationship*
-*The Staff 
+
 
 Primary tables:
   + `employees`
@@ -52,6 +47,11 @@ __Delete__
   + You can delete the employee details by clicking on the corresponding link *Delete*, adjacent to each employee in the Complete Employee List Section.
   + Confirm deletion on delete page.
   + Follow the confirmation message to confirm or cancel delete action.
+
+## Outside resources
++ Icons: [Font Awesome](https://fontawesome.com)
++ CSS: [Bootstrap CDN](https://www.bootstrapcdn.com) & [CSS ZEN Garden](http://csszengarden.com)
++ Image: [Project Logo](https://www.google.com/search?q=project-staffing+jpg&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwjzqcGG9fnaAhWEuVkKHWRuDKkQsAQIOQ&biw=1366&bih=606#imgrc=uipMv7v2P-ZzhM:)
 
 ## Code style divergences
 n/a

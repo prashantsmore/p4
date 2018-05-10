@@ -16,7 +16,7 @@
             @foreach($newEmployees as $employee)
                 <p class="text-capitalize">
                     <small><a href='/employees/{{ $employee->id }}/edit'>
-                            <bold>Employee ID</bold>{{ $employee->identification }} </a> Updated On
+                            <bold>Employee ID  </bold>{{ $employee->identification }} </a> Updated On
                         <i> {{ $employee->updated_at->toDayDateTimeString() }} </i></small>
                 </p>
             @endforeach

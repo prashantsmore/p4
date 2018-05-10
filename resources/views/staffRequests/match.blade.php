@@ -5,7 +5,7 @@
 @endpush
 
 @section('title')
-    Mathcing Employee List
+    Matching Employee List
 @endsection
 
 @section('content')
