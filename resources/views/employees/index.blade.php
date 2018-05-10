@@ -12,41 +12,45 @@
 
     @if(count($newEmployees) > 0)
         <aside id='newEmployees'>
-            <h2>Recently Joined</h2>
-            <ul>
-                @foreach($newEmployees as $employee)
-                    <li><a href='/employees/{{ $employee->id }}'>{{ $employee->identification }}</a></li>
-                @endforeach
-            </ul>
+            <h3>Employees Recently Joined Or Assigned </h3>
+            @foreach($newEmployees as $employee)
+                <p class="text-capitalize">
+                    <small><a href='/employees/{{ $employee->id }}/edit'>
+                            <bold>Employee ID</bold>{{ $employee->identification }} </a> Updated On
+                        <i> {{ $employee->updated_at->toDayDateTimeString() }} </i></small>
+                </p>
+            @endforeach
         </aside>
     @endif
 
-    <h2>Complete Employee List</h2>
-	@if(count($employees) > 0)
-	<div class="container">
-	<div class="table">
-		<div class="table-header">
-			<div class="header__item">Staff ID</div>
-			<div class="header__item">Name</div>
-			<div class="header__item">Address</div>
-			<div class="header__item">Edit</div>
-			<div class="header__item">Delete</div>
-		</div>
-		<div class="table-content">	
-		  @foreach($employees as $employee)
-      		<div class="table-row">		
-				<div class="table-data">{{ $employee->identification }} </div>
-				<div class="table-data">{{ $employee->first_name }} , {{ $employee->last_name }}</div>
-				<div class="table-data">{{ $employee->address_line_1}} , {{ $employee->address_line_2}}</div>
-				<div class="table-data"><a href='/employees/{{ $employee->id }}/edit'><i class="fas fa-pencil-alt"></i> Edit</a></div>
-				<div class="table-data"><a href='/employees/{{ $employee->id }}/delete'><i class="fas fa-trash-alt"></i> Delete</a></div>
-			</div>
-		@endforeach
-		</div>	
-	</div>
-</div>
-    @endif
-       
-    
+    <h3>Complete Employee List</h2>
+        @if(count($employees) > 0)
+            <div class="container">
+                <table class="table-style-three">
+                    <thead>
+                    <tr>
+                        <th>EMPLOYEE ID</th>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($employees as $employee)
+                        <tr>
+                            <td>{{ $employee->identification }}</td>
+                            <td>{{ $employee->first_name }} , {{ $employee->last_name }}</td>
+                            <td>{{ $employee->address_line_1}} , {{ $employee->address_line_2}}</td>
+                            <td><a href='/employees/{{ $employee->id }}/edit'><i class="fas fa-pencil-alt"></i> Edit</a>
+                            </td>
+                            <td><a href='/employees/{{ $employee->id }}/delete'><i class="fas fa-trash-alt"></i> Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
 
+    @endif
 @endsection

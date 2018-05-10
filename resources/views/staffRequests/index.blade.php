@@ -10,34 +10,37 @@
 
 @section('content')
 
-   
-    <h2>UnFulfilled Staffing Request</h2>
-	@if(count($staffRequests) > 0)
-	<div class="container">
-	<div class="table">
-		<div class="table-header">
-			<div class="header__item">Request ID</div>
-			<div class="header__item">Skill</div>
-			<div class="header__item">Start Date</div>
-			<div class="header__item">End Date</div>
-			<div class="header__item">Assign Employee</div>
-		</div>
-		<div class="table-content">		
-		  @foreach($staffRequests as $staffRequest)
-      		<div class="table-row">		
-				<div class="table-data">{{ $staffRequest->request_id }} </div>
-				<div class="table-data">{{ $staffRequest->skill_required }}</div>
-				<div class="table-data">{{ $staffRequest->start_date}} </div>
-				<div class="table-data">{{ $staffRequest->end_date}} </div>
-				<div class="table-data"><a href='/staffRequests/{{ $staffRequest->id }}/match'><i class="fas fa-pencil-alt"></i> Find Matching Employee</a></div>
-				<div class="table-data"><a href='/staffRequests/{{ $staffRequest->id }}/delete'><i class="fas fa-trash-alt"></i> Delete</a></div>
-			</div>
-		@endforeach
-		</div>	
-	</div>
-</div>
+    <h3>Unfulfilled Staffing Request</h2>
+        @if(count($staffRequests) > 0)
+            <div class="container">
+                <table class="table-style-three">
+                    <thead>
+                    <tr>
+                        <th>REQUEST ID</th>
+                        <th>SKILL</th>
+                        <th>START DATE</th>
+                        <th>END DATE</th>
+                        <th>ASSIGN EMPLOYEE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($staffRequests as $staffRequest)
+                        <tr>
+                            <td>{{ $staffRequest->request_id  }}</td>
+                            <td>{{ $staffRequest->skill_required }} </td>
+                            <td>{{ $staffRequest->start_date }}</td>
+                            <td>{{ $staffRequest->end_date}}</td>
+                            <td>
+                                <a href='/staffRequests/{{ $staffRequest->id }}/match'><i class="fas fa fa-search"></i> Find Matching Employee</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+
     @endif
-       
-    
+
+
 
 @endsection

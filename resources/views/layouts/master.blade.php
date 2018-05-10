@@ -18,7 +18,8 @@
 @endif
 
 <header>
-    <a href='/'><img src='/images/project-staffing.jpg' id='logo' alt='Staffing Management'></a>
+    <a href='/'><img width="180" height="80" src='/images/project-staffing.jpg' id='logo' alt='Staffing Management'></a>
+	 <h2 class="text-capitalize" ><strong>Staffing Management System</strong> </h2>
     @include('modules.nav')
 </header>
 
