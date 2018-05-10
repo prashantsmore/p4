@@ -10,7 +10,7 @@
 
 @section('content')
 
-    <h3>Unfulfilled Staffing Request</h2>
+    <h3>Unfulfilled Staffing Request</h3>
         @if(count($staffRequests) > 0)
             <div class="container">
                 <table class="table-style-three">

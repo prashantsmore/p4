@@ -34,7 +34,7 @@ __Create__
   + In case of errors, system will remain on same page with validation errors.
   
 __Read__
-  + To view existing employees and manage them , please use the following link - <http://p4.loc/employees>
+  + To view existing employees and manage them , please use the following link - <http://p4.dwa15.online/employees>
   + This function is also available as *Manage Employees* on the Home Page <http://p4.dwa15.online/>
   + There are two sections displayed here, first show recently added or assigned to open request employees.
   + The next section shows the complete list of employees in the application.
